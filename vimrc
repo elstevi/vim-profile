@@ -12,7 +12,7 @@ Plugin 'ajh17/spacegray.vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'roxma/vim-paste-easy'
 Plugin 'tyru/open-browser.vim'
-
+Plugin 'klen/python-mode'
 
 " We could also add repositories with a ".git" extension
 "Plugin 'scrooloose/nerdtree.git'
