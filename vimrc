@@ -25,4 +25,5 @@ Plugin 'klen/python-mode'
 autocmd FileType python set colorcolumn=120
 filetype plugin indent on
 colorscheme spacegray
+set hlsearch
 set mouse=
