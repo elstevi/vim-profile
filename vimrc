@@ -22,6 +22,7 @@ Plugin 'klen/python-mode'
 "Plugin 'Buffergator'
 
 " Now we can turn our filetype functionality back on
+autocmd FileType python set colorcolumn=120
 filetype plugin indent on
 colorscheme spacegray
 set mouse=
