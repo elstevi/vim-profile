@@ -34,3 +34,6 @@ ln -s ~/.vim/inputrc ~/.inputrc
 # Setup bash
 rm ~/.bashrc
 ln -s ~/.vim/bashrc ~/.bashrc
+
+rm ~/.bash_profile
+ln -s ~/.vim/bashrc ~/.bash_profile
