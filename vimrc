@@ -14,6 +14,7 @@ Plugin 'roxma/vim-paste-easy'
 Plugin 'tyru/open-browser.vim'
 Plugin 'klen/python-mode'
 Plugin 'bhurlow/vim-parinfer'
+Plugin 'rodjek/vim-puppet'
 
 " We could also add repositories with a ".git" extension
 "Plugin 'scrooloose/nerdtree.git'
