@@ -25,3 +25,4 @@ HOST='\[\e[36m\]\h'
 STINGER='\[\e[91m\]-->\[\e[0m\] '
 export TZ="America/Los_Angeles"
 export PS1="${TIME} ${WD}\n${USER}${AT}${HOST}${STINGER}"
+export PROMPT_COMMAND=""
