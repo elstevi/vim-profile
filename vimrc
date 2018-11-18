@@ -29,3 +29,4 @@ filetype plugin indent on
 colorscheme spacegray
 set hlsearch
 set mouse=
+syntax on
