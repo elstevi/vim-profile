@@ -14,17 +14,21 @@ if [ ! -f '~/.vim/no_update' ]; then
 			echo "Updates complete."
 		fi
 	fi
-	cd ${ORIGINAL_WD}
+fi
+cd ${ORIGINAL_WD}
+
+if [ -f ~/.vim/bofh_enable ]; then
+	timeout 2 curl -s https://raw.githubusercontent.com/elstevi/shitism-server/master/bofh.txt | sort -R | head -n1 2> /dev/null
 fi
 
 TIME='\[\e[96m\]\@'
 WD='\[\e[91m\]\w'
-USER='\[\e[31m\]\u'
+USR='\[\e[31m\]\u'
 AT='\[\e[0m\]@'
 HOST='\[\e[36m\]\h'
 STINGER='\[\e[91m\]-->\[\e[0m\] '
 export EDITOR="vim"
 export TZ="America/Los_Angeles"
-export PS1="${TIME} ${WD}\n${USER}${AT}${HOST}${STINGER}"
+export PS1="${TIME} ${WD}\n${USR}${AT}${HOST}${STINGER}"
 export PROMPT_COMMAND=""
 export PATH="${PATH}:/usr/local/bin:${HOME}/bin"
