@@ -30,4 +30,5 @@ filetype plugin indent on
 colorscheme spacegray
 set hlsearch
 set mouse=
+let g:pymode_options_max_line_length = 160
 syntax on
