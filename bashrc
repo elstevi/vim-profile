@@ -31,6 +31,7 @@ STINGER='\[\e[91m\]-->\[\e[0m\] '
 # Install auto completion
 source ~/.vim/completion/*
 alias t="bash ~/.vim/todo.sh -d ~/.vim/todo.cfg"
+alias vpu="bash ~/.vim/update.sh"
 complete -F _todo t
 
 export EDITOR="vim"
