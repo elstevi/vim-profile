@@ -32,3 +32,10 @@ set hlsearch
 set mouse=
 let g:pymode_options_max_line_length = 160
 syntax on
+
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+imap z <Esc>
