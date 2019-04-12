@@ -11,11 +11,9 @@ Plugin 'gmarik/vundle'
 Plugin 'ajh17/spacegray.vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'roxma/vim-paste-easy'
-Plugin 'tyru/open-browser.vim'
 Plugin 'klen/python-mode'
-Plugin 'bhurlow/vim-parinfer'
 Plugin 'rodjek/vim-puppet'
-Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'itspriddle/vim-shellcheck'
 
 " We could also add repositories with a ".git" extension
 "Plugin 'scrooloose/nerdtree.git'
@@ -37,5 +35,3 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-
-imap z <Esc>
