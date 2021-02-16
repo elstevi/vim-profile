@@ -39,3 +39,7 @@ export TZ="America/Los_Angeles"
 export PS1="${TIME} ${WD}\n${USR}${AT}${HOST}${STINGER}"
 export PROMPT_COMMAND=""
 export PATH="${PATH}:/usr/local/bin:${HOME}/bin"
+
+if [ -f ~/.bash_vars ]; then
+	source ~/.bash_vars
+fi
