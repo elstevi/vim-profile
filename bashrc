@@ -17,10 +17,6 @@ if [ ! -f '~/.vim/no_update' ]; then
 fi
 cd ${ORIGINAL_WD}
 
-if [ -f ~/.vim/bofh_enable ]; then
-	timeout 2 curl -s https://raw.githubusercontent.com/elstevi/shitism-server/master/bofh.txt | sort -R | head -n1 2> /dev/null
-fi
-
 TIME='\[\e[96m\]\@'
 WD='\[\e[91m\]\w'
 USR='\[\e[31m\]\u'
@@ -43,3 +39,8 @@ export PATH="${PATH}:/usr/local/bin:${HOME}/bin"
 if [ -f ~/.bash_vars ]; then
 	source ~/.bash_vars
 fi
+
+if [ -f ~/.vim/bofh_enable ]; then
+	timeout 2 curl -s https://raw.githubusercontent.com/elstevi/shitism-server/master/bofh.txt | sort -R | head -n1 2> /dev/null
+fi
+
