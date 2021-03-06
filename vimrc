@@ -35,6 +35,6 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-" toggle nerdtree
-" nnoremap <F12> :NERDTreeToggle<CR>
+"toggle nerdtree
+nnoremap <F12> :NERDTreeToggle<CR>
 silent! colorscheme spacegray
