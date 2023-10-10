@@ -5,7 +5,7 @@ call vundle#rc()
 
 Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdtree'
-Plugin 'ajh17/spacegray.vim'
+Plugin 'morhetz/gruvbox'
 Plugin 'nvie/vim-flake8'
 Plugin 'roxma/vim-paste-easy'
 Plugin 'klen/python-mode'
@@ -14,7 +14,7 @@ Plugin 'itspriddle/vim-shellcheck'
 
 " Now we can turn our filetype functionality back on
 autocmd FileType python set colorcolumn=120
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 
 " Go to previous (last accessed) window.
 autocmd VimEnter * wincmd p
@@ -35,6 +35,7 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+set background=dark
 "toggle nerdtree
 nnoremap <F12> :NERDTreeToggle<CR>
-silent! colorscheme spacegray
+silent! colorscheme gruvbox
