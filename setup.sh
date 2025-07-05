@@ -7,7 +7,7 @@ mkdir -p ~/.vim/bundle
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 # Install plugins
-echo | echo | vim +PluginInstall +qall &>/dev/null
+vim +PluginInstall +qall
 
 # Setup tmux
 rm ~/.tmux.conf
