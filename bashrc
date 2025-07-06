@@ -1,22 +1,3 @@
-# Are any updates needed?
-ORIGINAL_WD=$(pwd)
-cd ~/.vim
-if [ ! -f '~/.vim/no_update' ]; then
-	timeout 2 git remote update > /dev/null 2>&1
-	UPDATE_STATUS=$(git status -uno | grep -c -i 'behind\|different')
-	if [ "$UPDATE_STATUS" != "0" ]; then
-		read -p "Updates available, update now? " -n 1 -r
-		echo
-		if [[ $REPLY =~ ^[Yy]$ ]]; then
-			git reset --hard
-			git pull -f origin master
-			sh ~/.vim/setup.sh
-			echo "Updates complete."
-		fi
-	fi
-fi
-cd ${ORIGINAL_WD}
-
 TIME='\[\e[96m\]\@'
 WD='\[\e[91m\]\w'
 USR='\[\e[31m\]\u'
@@ -44,3 +25,17 @@ if [ -f ~/.vim/bofh_enable ]; then
 	timeout 2 curl -s https://raw.githubusercontent.com/elstevi/shitism-server/master/bofh.txt | sort -R | head -n1 2> /dev/null
 fi
 
+if [ "$(uname)" == "Darwin" ]; then
+	export HOMEBREW_PREFIX="/opt/homebrew";
+	export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
+	export HOMEBREW_REPOSITORY="/opt/homebrew";
+	fpath[1,0]="/opt/homebrew/share/zsh/site-functions";
+	PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"; export PATH;
+	[ -z "${MANPATH-}" ] || export MANPATH=":${MANPATH#:}";
+	export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
+	export BASH_SILENCE_DEPRECATION_WARNING=1
+fi
+
+if [ "$(which pyenv)" ]; then
+	eval "$(pyenv virtualenv-init -)"
+fi
